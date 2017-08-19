@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选项卡点击更换背景图</title>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/click.js"></script>
+    <style>
+        .menu {
+
+        }
+        .item {
+            list-style-type: none;
+            width: 300px;
+            height: 50px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 30px;
+            background-repeat: no-repeat;
+            background-size: 30px 30px;
+        }
+        .item:hover {
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li class="item-0 item item-active" onclick="clickItem(0)">选项卡一</li>
+            <li class="item-1 item" onclick="clickItem(1)">选项卡二</li>
+            <li class="item-2 item" onclick="clickItem(2)">选项卡三</li>
+        </ul>
+    </div>
+</body>
+</html>
