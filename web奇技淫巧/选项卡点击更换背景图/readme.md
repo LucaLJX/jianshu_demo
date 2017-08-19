@@ -6,7 +6,7 @@
 
 - 点击某个选项，其选项图标改变，且鼠标移出之后，保持背景图片改变的效果
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/2296703-8a070ead2309f214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![示意图](./images/demo.png)
 
 ### 简单分析
 
@@ -69,9 +69,9 @@ export default {
 
  - 纯 jquery环境
 
-### 源码查看地址
+### 简书查看地址
 
-> github: 
+> 简书：http://www.jianshu.com/p/c6453464ee0a 
 
 ### 主要代码实现
 
