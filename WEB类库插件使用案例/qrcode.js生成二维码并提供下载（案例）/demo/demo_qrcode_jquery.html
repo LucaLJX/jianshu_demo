@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/qrcode_jquery/jquery.qrcode.min.js"></script>
+</head>
+<style>
+  #qrcode {
+    width: 130px;
+    height: 130px;
+    border: 1px solid red;
+  }
+</style>
+<body>
+  <div id="qrcode"></div>
+  <script type="text/javascript">
+    var qrcode = $('#qrcode').qrcode({
+      width: 128,
+      height: 128,
+      text: "size doesn't matter"
+    });
+  </script>
+</body>
+</html>
