@@ -16,7 +16,10 @@
 </style>
 <body>
   <div id="qrcode"></div>
-  <button type="button" onclick="clickBtn()">换二维码</button>
+  <button id="btn" type="button" onclick="clickBtn()">换二维码</button>
+  <button type="button" onclick="downloadClick()">下载</button>
+
+  <a id="downloadLink"></a>
 
   <script type="text/javascript">
     var qrcode = new QRCode(document.getElementById("qrcode"), {
@@ -29,7 +32,25 @@
     });
     
     function clickBtn (index) {
+      console.log('dianji');
       qrcode.makeCode("http://www.w3cschool.cc");
+    }
+
+    function downloadClick () {
+      // 获取base64的图片节点
+      var img = document.getElementById('qrcode').getElementsByTagName('img')[0];
+      // 构建画布
+      var canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      // 构造url
+      url = canvas.toDataURL('image/png');
+      // 构造a标签并模拟点击
+      var downloadLink = document.getElementById('downloadLink');
+      downloadLink.setAttribute('href', url);
+      downloadLink.setAttribute('download', '二维码');
+      downloadLink.click();
     }
   </script>
 </body>

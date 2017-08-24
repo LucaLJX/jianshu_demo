@@ -58,3 +58,56 @@
 
 ### 点击按钮，生成的二维码图片保存到本地
 
+#### 实现原理
+
+ - 将base64编码格式的图片转换成canvas画布
+ - 利用toDataUrl()方法将canvas画布信息转化为可供下载的url信息 [ toDataUrl() ](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL)
+ - 构建下载链接并模拟点击，将图片下载到本机
+
+#### 基于qrcode.js案例demo实现将生成的二维码保存为本地图片
+
+ - 构建一个用于下载的空的a标签
+
+```html
+  <a id="downloadLink"></a>
+  <button type="button" onclick="downloadClick()">下载</button>
+```
+
+ - 将base64图片构建成画布并模拟点击a标签下载
+
+```javascript
+  //js
+  function downloadClick () {
+    // 获取base64的图片节点
+    var img = document.getElementById('qrcode').getElementsByTagName('img')[0];
+    // 构建画布
+    var canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    canvas.getContext('2d').drawImage(img, 0, 0);
+    // 构造url
+    url = canvas.toDataURL('image/png');
+    // 构造a标签并模拟点击
+    var downloadLink = document.getElementById('downloadLink');
+    downloadLink.setAttribute('href', url);
+    downloadLink.setAttribute('download', '二维码.png');
+    downloadLink.click();
+  }
+  //jquery
+  function downloadClick () {
+    // 获取base64的图片节点
+    var img = $('#qrcode img').[0];
+    // 构建画布
+    var canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    canvas.getContext('2d').drawImage(img, 0, 0);
+    // 构造url
+    url = canvas.toDataURL('image/png');
+    // 构造a标签并模拟点击
+    var downloadLink = $('#downloadLink').attr("href", url).attr("download", "二维码.png");
+    downloadLink[0].click();
+  }
+```
+
+
