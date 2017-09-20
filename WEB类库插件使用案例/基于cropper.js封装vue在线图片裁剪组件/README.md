@@ -5,6 +5,7 @@
 
 ![效果图](cropper-demo.jpg)
 
+[github:demo下载](https://github.com/LucaLJX/jianshu_demo/tree/master/WEB%E7%B1%BB%E5%BA%93%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B/%E5%9F%BA%E4%BA%8Ecropper.js%E5%B0%81%E8%A3%85vue%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E8%A3%81%E5%89%AA%E7%BB%84%E4%BB%B6)
 
 ### cropper.js
 
