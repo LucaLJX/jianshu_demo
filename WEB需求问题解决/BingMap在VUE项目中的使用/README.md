@@ -1,6 +1,10 @@
 
 # bing Map 在vue项目中的使用
 
+## 写在最前面
+
+拥有全球数据库国内好像就只有百度地图有，高德、搜狗、腾讯的都不行，但是由于百度地图的数据更新不及时，所以在做相关项目要用到国外数据的时候，最好还是推荐使用bingMap。
+
 ## bing Map 使用教程（基础）
 
 > 参考文档： [bing Map 官方教程](https://msdn.microsoft.com/en-us/library/mt712557.aspx)
