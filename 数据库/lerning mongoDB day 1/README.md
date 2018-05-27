@@ -227,12 +227,20 @@ db.collection.remove(
 
   > writeConcern :（可选）抛出异常的级别。
 
+**remove()语法必须传query参数，可以是｛｝，不传的话会报错**  
+
 demo
 ```javascript
 // 删除检索条件为title是remove的文档（全部删除）
 db.test.remove({title: 'remove'})
 // 删除检索条件为title是remove的文档（只删除1个）
 db.test.remove({title: 'remove'}, 1)
+```
+
+ - 语法
+
+```javascript
+db.xxx.update({xxx:xxx}, {$pop: {key: }});
 ```
 
 注意：db.xxx.find()可以查看集合下所有的文档
@@ -245,6 +253,12 @@ db.test.remove({title: 'remove'}, 1)
 
 ```javascript
   db.collection.find(query, projection)
+
+  // 也可以用findOne()进行查询
+  db.collection.findOne(query, projection)
+
+  // 等价于
+  db.collection.find().limit(1)
 ```
 
 参数说明
@@ -375,3 +389,4 @@ db.col.find({"by":"菜鸟教程", "title":"MongoDB 教程"}).pretty()
  > skip(), limilt(), sort()三个放在一起执行的时候，执行的顺序是先 sort(), 然后是 skip()，最后是显示的 limit()。
 
 
+BY-[Luca_LJX](https://github.com/LucaLJX/jianshu_demo/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/lerning%20mongoDB%20day%201)
