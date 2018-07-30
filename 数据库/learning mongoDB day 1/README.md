@@ -16,6 +16,10 @@
   
  - 配置文件示例
 
+ >参考： [http://www.cnblogs.com/zlslch/p/6935377.html](http://www.cnblogs.com/zlslch/p/6935377.html)
+
+ **注意：3.2版本之后httpinterface参数废弃**
+
  mongod.conf
 
 ```shell
@@ -32,6 +36,17 @@ storage:
 
 ```shell
 mongod --config xxxxxx
+```
+
+>操作参考：[https://blog.csdn.net/zhangpengfei104/article/details/52368237](https://blog.csdn.net/zhangpengfei104/article/details/52368237)
+
+
+### 给数据库创建登录账号密码
+
+```shell
+show dbs 
+use admin
+db.createUser()...
 ```
 
 ### 基础使用
