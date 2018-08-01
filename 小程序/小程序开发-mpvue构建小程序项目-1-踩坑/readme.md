@@ -147,5 +147,5 @@ export default {
 }
 ```
 
-
+BY-Luca_LJX([git地址](https://github.com/LucaLJX/jianshu_demo/tree/master/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-mpvue%E6%9E%84%E5%BB%BA%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B9%E7%9B%AE-1-%E8%B8%A9%E5%9D%91)
 
