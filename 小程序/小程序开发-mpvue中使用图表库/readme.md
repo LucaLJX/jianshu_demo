@@ -223,4 +223,6 @@
   1. 建议 ‘ this.$mp.page.selectComponent('#column').init(initChart) ’ 这行代码写在vue生命周期mounted里面，而不是小程序onLoad里面，因为vue页面加载在小程序后面 
 
   2. wx-f2中的tooltip失效，并未使用成功，后续待解决（touch事件绑定成功，但对应的图表效果没有）
+
+  > -- LucaLJX:  [github:https://github.com/LucaLJX](https://github.com/LucaLJX/jianshu_demo)
   
