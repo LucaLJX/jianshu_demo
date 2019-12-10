@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .wrapper {
+      min-width: 300px;
+      padding: 100px 0px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="wrapper">
+    <ul id="ulDom">
+      <li>12</li>
+      <li>22</li>
+      <li>32</li>
+      <li>33</li>
+    </ul>
+  </div>
+
+  <button id="addBtn">添加</button>
+
+  <script>
+    window.onload = function () {
+      console.log('sd');
+      var ulDom = document.getElementById('ulDom');
+
+      // 事件委托--鼠标滑入
+      ulDom.onmouseover = function (ev) {
+        console.log('onmouseover');
+        var _ev = ev || window.event;
+        var _target = _ev.target || _ev.srcElement;
+        console.log(_target.nodeName.toLowerCase());
+        if (_target.nodeName.toLowerCase() == 'li') {
+          _target.style.background = 'red';
+          console.log(_target.innerHTML);
+        }
+      }
+
+      // 事件委托--鼠标滑出
+      ulDom.onmouseout = function (ev) {
+        console.log('onmouseout');
+        var _ev = ev || window.event;
+        var _target = _ev.target || _ev.srcElement;
+        if (_target.nodeName.toLowerCase() == 'li') {
+          _target.style.background = 'green';
+          console.log(_target.innerHTML);
+        }
+      }
+
+      // 点击按钮--添加节点
+      var addBtn = document.getElementById('addBtn');
+      var num = 55;
+      addBtn.onclick = function () {
+        num++;
+        var newLi = document.createElement('li');
+        newLi.innerHTML = num;
+        ulDom.appendChild(newLi);
+      }
+    }
+  </script>
+</body>
+</html>
